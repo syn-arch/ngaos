@@ -81,7 +81,7 @@ function ListSurah(props) {
                     <p className="text-sm text-gray-500">{surah.arti}</p>
                   </div>
                 </div>
-                <p>{surah.nama}</p>
+                <p className="text-xl">{surah.nama}</p>
               </div>
             </Link>
           );
