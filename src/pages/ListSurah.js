@@ -24,9 +24,9 @@ function ListSurah(props) {
   return (
     <div className="bg-white">
       <div className="bg-green-500 text-center text-white py-4 rounded-xl -mt-2">
-        <h1 className="font-smibold text-xl">Al Quran</h1>
+        <h1 className="font-semibold text-xl">Al Quran</h1>
       </div>
-      <form className="mt-3 px-2">
+      <form className="mt-3 px-2" onSubmit={(e) => e.preventDefault()}>
         <input
           onChange={handleSearch}
           autoComplete="off"
@@ -41,14 +41,17 @@ function ListSurah(props) {
           <Link to={`/surah/${surah.nomor}`} key={index}>
             <div className="flex justify-between mt-3 border-b-2 pb-2 mx-2">
               <div className="flex">
-                <div className="bg-green-500 w-12 h-12 text-center flex items-center justify-center text-white font-semibold mr-2">
+                <div className="bg-green-500 w-12 h-12 text-center flex items-center justify-center text-white font-semibold mr-2 rounded-full">
                   {surah.nomor}
                 </div>
                 <div className="flex flex-col">
                   <p className="text-green-500 font-semibold">
-                    {surah.nama_latin}
+                    {surah.nama_latin}{" "}
+                    <span className="font-normal text-gray-400 text-sm">
+                      ({surah.jumlah_ayat})
+                    </span>
                   </p>
-                  <p className="text-sm text-gray-500">{surah.jumlah_ayat}</p>
+                  <p className="text-sm text-gray-500">{surah.arti}</p>
                 </div>
               </div>
               <p>{surah.nama}</p>
