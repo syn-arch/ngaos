@@ -2,11 +2,21 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Player from "./Player";
 
+const goToTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+};
+
 function Navbar({ surah }) {
   return (
     <div className="bg-green-600 fixed bottom-2 right-1 left-1 p-4 flex justify-between rounded-full">
       {surah.surat_sebelumnya.nomor && (
-        <Link to={`/surah/${surah.nama && surah.surat_sebelumnya.nomor}`}>
+        <Link
+          onClick={goToTop()}
+          to={`/surah/${surah.nama && surah.surat_sebelumnya.nomor}`}
+        >
           <svg
             className="w-6 h-6 text-white"
             fill="none"
@@ -25,7 +35,10 @@ function Navbar({ surah }) {
       )}
       <Player url={surah.audio} />
       {surah.surat_selanjutnya.nomor && (
-        <Link to={`/surah/${surah.nama && surah.surat_selanjutnya.nomor}`}>
+        <Link
+          onClick={goToTop()}
+          to={`/surah/${surah.nama && surah.surat_selanjutnya.nomor}`}
+        >
           <svg
             className="w-6 h-6 text-white"
             fill="none"
