@@ -11,8 +11,8 @@ function Home(props) {
           NGAOS QURAN
         </h1>
         <p className="w-2/3 mx-auto mb-20 text-gray-600">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
-          reiciendis explicabo nihil blanditiis expedita.
+          “Bacalah Al-Qur’an, karena sesungguhnya ia akan menjadi syafaat bagi
+          para pembacanya di hari kiamat.” (HR. Muslim)
         </p>
         <Link
           to="/surah"
