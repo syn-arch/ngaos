@@ -1,11 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Quran2 from "../img/quran2.png";
 
-function Home(props) {
+function Surah(props) {
   return (
     <div className="h-screen bg-white pt-32">
-      <img src={Quran2} alt="" className="w-48 mx-auto" />
       <div className="text-center mt-8">
         <h1 className="font-semibold text-2xl mb-2 text-gray-800">
           NGAOS QURAN
@@ -25,4 +23,4 @@ function Home(props) {
   );
 }
 
-export default Home;
+export default Surah;
